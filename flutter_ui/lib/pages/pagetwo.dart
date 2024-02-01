@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/widgets/avatar.dart';
+import 'package:flutter_ui/widgets/listview.dart';
 
 class PageTwo extends StatelessWidget {
   PageTwo({Key? key}) : super(key: key);
@@ -21,11 +22,6 @@ class PageTwo extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text("Dashboard"),
-          actions: const [],
-        ),
-        body: AvatarContainer(colors: colors));
+    return Scaffold(body: MyListView());
   }
 }

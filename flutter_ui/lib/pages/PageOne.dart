@@ -22,54 +22,56 @@ class PageOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        MyTextField(),
-        MyDropDown(),
-        MySwitch(),
-        MyRadio(),
-        MyCheckbox(),
-        MyDatePicker(),
-        MyDialog(),
-        SizedBox(
-          height: 20,
-        ),
-        MyBottomSheet(),
-        SizedBox(
-          height: 20,
-        ),
-        ElevatedButton(
-          onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                backgroundColor: Colors.blue,
-                content: Text('Your request is succesful'),
-              ),
-            );
-          },
-          child: const Text('Open SnackBar'),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const MyTabBar()));
-          },
-          child: const Text('Open Tab bar'),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const MySilverAppBar()));
-          },
-          child: const Text('Open Silver App bar'),
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          MyTextField(),
+          MyDropDown(),
+          MySwitch(),
+          MyRadio(),
+          MyCheckbox(),
+          MyDatePicker(),
+          MyDialog(),
+          SizedBox(
+            height: 20,
+          ),
+          MyBottomSheet(),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  backgroundColor: Colors.blue,
+                  content: Text('Your request is succesful'),
+                ),
+              );
+            },
+            child: const Text('Open SnackBar'),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const MyTabBar()));
+            },
+            child: const Text('Open Tab bar'),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const MySilverAppBar()));
+            },
+            child: const Text('Open Silver App bar'),
+          ),
+        ],
+      ),
     );
   }
 }
